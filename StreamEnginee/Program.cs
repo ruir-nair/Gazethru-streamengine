@@ -124,6 +124,10 @@ namespace StreamEnginee
         private void websocket_Closed(object sender, EventArgs e)
         {
             Console.WriteLine("Websocket is closed.");
+
+            //websocket dibuka paksa
+            Console.WriteLine("Reopening websocket...");
+            webSocket.Open();
         }
 
         private void websocket_MessageReceived(object sender, MessageReceivedEventArgs e)
